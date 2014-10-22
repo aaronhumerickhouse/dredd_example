@@ -1,0 +1,14 @@
+#!/bin/sh
+if [ "$CI" = "true" ]
+  then
+    npm update -g npm
+    npm install -g dredd@0.3.8
+fi
+sh scripts/reset_db.coffee
+sh app.coffee &
+sleep 3
+PID=$!
+dredd apiary.apib http://localhost:3000/ --hookfiles=hooks/*
+RESULT=$?
+kill -9 $PID
+exit $RESULT
