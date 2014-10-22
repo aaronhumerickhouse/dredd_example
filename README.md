@@ -17,5 +17,3 @@ Have a look at our [blogpost how to test RESTful APIs][blogpost] with [Dredd][],
 [Gavel]: https://www.relishapp.com/apiary/gavel/docs
 [API Blueprint]: http://apiblueprint.org/
 [blogpost]: http://blog.apiary.io/2013/10/17/How-to-test-api-with-api-blueprint-and-dredd/
-
-diff
